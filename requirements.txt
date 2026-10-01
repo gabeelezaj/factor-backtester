@@ -1,0 +1,12 @@
+pandas>=2.0
+numpy>=1.24
+pyarrow>=12
+pyyaml>=6
+scipy>=1.10
+streamlit>=1.30
+plotly>=5
+pytest>=7
+# optional, only imported inside their own adapters:
+# yfinance>=0.2
+# requests>=2.28
+# wrds>=3.1

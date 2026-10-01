@@ -1,0 +1,30 @@
+# Greenblatt's Magic Formula: return on capital + earnings yield, equal rank weights, top 30, annual.
+name: placebo
+data_source:
+  name: synthetic
+  params:
+    seed: 42
+    signal_strength: 0.0
+start: 1990-12-31
+end: 2024-12-31
+factors:
+  return_on_capital: 0.5
+  earnings_yield: 0.5
+ranking_method: rank_sum
+missing_policy: drop
+universe:
+  max_names: 5000
+  min_market_cap: 50000000.0
+  min_price: 1.0
+  exchanges: [NYSE, AMEX, NASDAQ]
+  exclude_sic_ranges: [[6000, 6999], [4900, 4999]]
+top_n: 30
+weighting: equal
+frequency: annual
+annual_month: 12
+sleeves: false
+costs:
+  kind: size
+  flat_bps: 20.0
+split_date: 2010-12-31
+notes: Same strategy on a zero-signal panel. Must show nothing.

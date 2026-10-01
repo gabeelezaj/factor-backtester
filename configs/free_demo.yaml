@@ -1,0 +1,28 @@
+# Magic Formula on real tickers from the free source. SURVIVORSHIP-BIASED DEMO: today's large caps only.
+name: free_demo_magic_formula
+data_source:
+  name: free
+  params:
+    max_tickers: 0
+start: 2010-12-31
+end: 2024-12-31
+factors:
+  return_on_capital: 0.5
+  earnings_yield: 0.5
+ranking_method: rank_sum
+missing_policy: drop
+universe:
+  max_names: 5000
+  min_market_cap: 50000000.0
+  min_price: 1.0
+  exchanges: [NYSE, AMEX, NASDAQ]
+  exclude_sic_ranges: [[6000, 6999], [4900, 4999]]
+top_n: 30
+weighting: equal
+frequency: annual
+annual_month: 12
+sleeves: false
+costs:
+  kind: size
+split_date: 2018-12-31
+notes: Demo on real data. Results are optimistic because the universe is today's survivors.

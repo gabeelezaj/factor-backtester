@@ -1,0 +1,25 @@
+[project]
+name = "factor-ranker"
+version = "0.1.0"
+description = "Multi-factor stock ranking backtester with swappable data sources"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "pyarrow>=12",
+    "pyyaml>=6",
+    "scipy>=1.10",
+    "streamlit>=1.30",
+    "plotly>=5",
+]
+
+[project.optional-dependencies]
+free = ["yfinance>=0.2", "requests>=2.28"]
+wrds = ["wrds>=3.1"]
+dev = ["pytest>=7"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]

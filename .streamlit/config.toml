@@ -1,0 +1,10 @@
+# Streamlit settings for the backtester UI. Theme follows your system (light/dark); the accent matches the charts.
+[theme]
+primaryColor = "#2a78d6"
+
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = false
+runOnSave = true

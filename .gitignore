@@ -1,0 +1,18 @@
+# Licensed / cached market data must never be committed (root data/ and runs/ only — NOT src/data/)
+/data/
+/runs/
+*.parquet
+*.pgpass
+.pgpass
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.streamlit/secrets.toml
+.DS_Store
+validation/results/*_log.txt
+
+# Secrets
+.env
+.env.*
+!.env.example
